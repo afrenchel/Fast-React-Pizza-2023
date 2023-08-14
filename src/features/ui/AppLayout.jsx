@@ -12,10 +12,10 @@ const AppLayout = () => {
       {isLoading && <Loader />}
       <Header />
 
-      <div className="overflow-scroll">
+      <div className="overflow-scroll ">
 
-      <main className="overflow-scroll max-w-3xl mx-auto">
-        <h1>Content</h1>
+      <main className="overflow-scroll  max-w-3xl mx-auto">
+      
         <Outlet />
       </main>
       </div>
