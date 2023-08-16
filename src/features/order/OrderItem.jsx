@@ -1,7 +1,7 @@
 import { formatCurrency } from "../../utils/helpers";
 
 
-function OrderItem({ item, }) {
+function OrderItem({ item }) {
   const { quantity, name, totalPrice } = item;
 
   return (
