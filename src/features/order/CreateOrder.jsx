@@ -135,16 +135,16 @@ function CreateOrder() {
 
 export async function action({ request }) {
   const formData = await request.formData();
-  console.log(formData);
+
   const data = Object.fromEntries(formData);
-  console.log(data);
+
 
   const order = {
     ...data,
     cart: JSON.parse(data.cart),
     priority: data.priority === "true",
   };
-  console.log(order);
+
 
   const errors = {};
 

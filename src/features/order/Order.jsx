@@ -20,7 +20,7 @@ function Order() {
     if (!fetcher.data&&fetcher.state==='idle') fetcher.load('/menu')
   },[fetcher])
 
-  console.log(fetcher.data)
+
 
   // Everyone can search for all orders, so for privacy reasons we're gonna gonna exclude names or address, these are only for the restaurant staff
   const {
@@ -66,7 +66,7 @@ function Order() {
       <div className="space-y-2 bg-stone-200 py-5 px-6">
         <p className="text-sm font-medium text-stone-600">Price pizza: {formatCurrency(orderPrice)}</p>
         {priority && <p className="text-sm font-medium text-stone-600">Price priority: {formatCurrency(priorityPrice)}</p>}
-        <p className="font-semibold">To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}</p>
+        <p className="font-bold">To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}</p>
       </div>
 
       {!priority &&<UpdateOrder order={order}/>}
